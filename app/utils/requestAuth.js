@@ -1,6 +1,5 @@
 import request from './request';
-import { getSession, getOAuth } from '../cookieManager';
-import clients from '../containers/AuthPage/client_config.json';
+import { getSession } from '../cookieManager';
 
 /**
  * Requests a URL, returning a promise
@@ -15,17 +14,13 @@ export default function requestAuth(url, options) {
   if (options)
     optionsAuth = Object.assign(options, {
       headers: {
-        authorization: `Bearer ${getSession()} ${
-          clients.clients_arr[getOAuth()]
-        }`,
+        authorization: `Bearer ${getSession()} each`,
       },
     });
   else
     optionsAuth = {
       headers: {
-        authorization: `Bearer ${getSession()} ${
-          clients.clients_arr[getOAuth()]
-        }`,
+        authorization: `Bearer ${getSession()} each`,
       },
     };
   return request(url, optionsAuth);

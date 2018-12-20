@@ -7,9 +7,9 @@ import LoadingIndicator from '../components/LoadingIndicator/index';
 import { getLogined, getOAuth, getSession, setUser } from '../cookieManager';
 import requestAuth from './requestAuth';
 import { newError, userDataGot } from '../containers/App/actions';
-import { Logout } from '../containers/LogoutButton/index';
+// import { Logout } from '../containers/LogoutButton/index';
 
-import config from '../containers/AuthPage/client_config.json';
+import { urls } from './constants';
 
 export const AUTH_USER = 'authorizeUserComponent';
 export const AUTH_ADMIN = 'authorizeAdminComponent';
@@ -34,9 +34,7 @@ const Auth = ({ mode }) => WrappedComponent => {
     state = { req: false, func: false, accessType: 'user', error: false };
     componentWillMount() {
       if (getLogined() === 'true' && getSession() && getOAuth()) {
-        const requestURL = `${
-          config.token_info_url
-        }?access_token=${getSession()}&type=${config.clients_arr[getOAuth()]}`;
+        const requestURL = urls.auth.token_info_url;
         this.state.req = true;
         this.state.func = requestAuth(requestURL)
           .then(user => {
@@ -49,7 +47,7 @@ const Auth = ({ mode }) => WrappedComponent => {
             this.setState({ req: false, accessType: data.accessType });
           })
           .catch(err => {
-            if (err.message !== 'Failed to fetch') Logout();
+            // if (err.message !== 'Failed to fetch') Logout();
             this.context.store.dispatch(
               newError({
                 source: 'user',
