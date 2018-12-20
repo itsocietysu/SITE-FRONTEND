@@ -1,0 +1,30 @@
+{
+  "count": 12,
+  "page": 2,
+  "result": [
+    {
+      "eid": 803,
+      "title": {
+        "RU": "\u0417\u0430\u0433\u043e\u043b\u043e\u0432\u043e\u043a",
+        "EN": "Header"
+      },
+      "desc": {
+        "RU": "\u0417\u0430\u0433\u043e\u043b\u043e\u0432\u043e\u043a",
+        "EN": "Header"
+      },
+      "text": {
+        "RU":
+          "<div style=\"color: #5b7bbb\">\u0421\u043a\u0430\u0447\u0430\u0439\u0442\u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435</div>",
+        "EN": "<div style=\"color: #5b7bbb\">Download application</div>"
+      },
+      "image": [
+        {
+          "eid": "804",
+          "url":
+            "each.itsociety.su:4201/each/images/773009f4179b4fc3ba98a1c6f05948dc.jpg"
+        }
+      ],
+      "priority": [-1]
+    }
+  ]
+}
