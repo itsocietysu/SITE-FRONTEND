@@ -25,8 +25,8 @@ import {
 import H1 from '../../components/H1';
 import messages from './messages';
 import mMessages from '../MuseumsPage/messages';
-import DataList from '../../components/DataList';
-import FeedsListItem from '../../containers/FeedListItem';
+// import DataList from '../../components/DataList';
+// import FeedsListItem from '../../containers/FeedListItem';
 import { contentChanged, loadData } from './actions';
 import reducer from './reducer';
 import saga from './saga';
@@ -58,7 +58,7 @@ const styleButtonMuseum = color =>
     styleButton,
   );
 
-function separateData(data) {
+/* function separateData(data) {
   const derData = [];
   let item = [];
   data.forEach(element => {
@@ -70,7 +70,7 @@ function separateData(data) {
   });
   if (item.length) derData.push(item);
   return derData;
-}
+} */
 
 /* eslint-disable react/prefer-stateless-function */
 export class HomePage extends React.PureComponent {
@@ -89,26 +89,27 @@ export class HomePage extends React.PureComponent {
   }
 
   render() {
-    const { loading, error, data, homeContent, header } = this.props;
-    const setData = data ? separateData(data) : false;
-    const dataListProps = {
+    const { /* loading, error, data, */ homeContent, header } = this.props;
+    // const setData = data ? separateData(data) : false;
+    /* const dataListProps = {
       loading,
       error,
       data: setData,
       component: FeedsListItem,
       scroll: false,
       array: true,
-    };
+    }; */
     const colorFeed = homeContent === FEED_CFG ? `${colors.base}` : '#000';
     const colorMuseum = homeContent === MUSEUM_CFG ? `${colors.base}` : '#000';
     return (
       <article>
         <Helmet>
           <title>Home Page</title>
-          <meta name="description" content="An EACH application homepage" />
+          <meta name="description" content="A SITE application homepage" />
         </Helmet>
         <Header item={header} ref={this.state.header} />
-        <Title>
+
+        <Title style={{ height: '1000px' }}>
           <button
             style={styleButtonFeed(colorFeed)}
             onClick={() => this.props.change(FEED_CFG)}
@@ -125,9 +126,8 @@ export class HomePage extends React.PureComponent {
               <FormattedMessage {...mMessages.header} />
             </H1>
           </button>
-          <img src="/separator.PNG" alt="" style={{ height: 'inherit' }} />
         </Title>
-        <DataList {...dataListProps} />
+        {/* <DataList {...dataListProps} /> */}
       </article>
     );
   }

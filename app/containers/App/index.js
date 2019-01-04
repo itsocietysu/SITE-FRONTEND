@@ -16,7 +16,6 @@ import routes from '../../utils/routeConfig';
 import CookieBanner from '../CookieBanner';
 
 const AppWrapper = styled.div`
-  max-width: calc(768px + 16px * 2);
   margin: 0 auto;
   display: flex;
   min-height: 100%;
@@ -30,8 +29,8 @@ export default function App() {
     <div>
       <CookieBanner />
       <AppWrapper>
-        <Helmet titleTemplate="%s - EACH" defaultTitle="EACH">
-          <meta name="description" content="An EACH application" />
+        <Helmet titleTemplate="%s - SITE" defaultTitle="SITE">
+          <meta name="description" content="An SITE application" />
         </Helmet>
         <Switch>
           {routes.map((route, i) => (
