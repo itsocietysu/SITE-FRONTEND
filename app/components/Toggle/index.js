@@ -12,7 +12,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const MyButton = styled.button`
-  border-bottom: ${props => (props.active ? '1px solid blue' : '')};
+  border-bottom: ${props =>
+    props.active ? '1px solid blue' : '1px solid transparent'};
   cursor: pointer;
   padding: 0px;
   margin: 0px 0.3em;

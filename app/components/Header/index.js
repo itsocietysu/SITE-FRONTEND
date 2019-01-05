@@ -1,7 +1,5 @@
 /* eslint-disable react/prefer-stateless-function,react/prop-types */
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import { FormattedMessage } from 'react-intl';
 import { withRouter } from 'react-router-dom';
 import {
   Collapse,
@@ -16,10 +14,7 @@ import Img from './Img';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../../../node_modules/jquery/dist/jquery.min';
 
-// import HeaderLink from './HeaderLink';
-// import messages from './messages';
 import LocaleToggle from '../../containers/LocaleToggle';
-// import H1 from '../../components/H1';
 import './index.css';
 import navs from './navItems.json';
 
@@ -67,22 +62,5 @@ class Header extends React.Component {
     );
   }
 }
-/* class Header extends React.Component {
-  render() {
-    return (
-      <div>
-
-        <div className="navBar">
-          <div className="divNavBar">
-            <HeaderLink to="/">
-              <Img src="/logo.svg" alt="MUSEEACH - Logo" />
-              <H1>МУЗЕИЧ</H1>
-            </HeaderLink>
-          </div>
-        </div>
-      </div>
-    );
-  }
-} */
 
 export default withRouter(Header);

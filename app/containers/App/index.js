@@ -30,7 +30,7 @@ export default function App() {
       <CookieBanner />
       <AppWrapper>
         <Helmet titleTemplate="%s - SITE" defaultTitle="SITE">
-          <meta name="description" content="An SITE application" />
+          <meta name="description" content="A SITE application" />
         </Helmet>
         <Switch>
           {routes.map((route, i) => (

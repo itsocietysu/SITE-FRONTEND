@@ -32,6 +32,7 @@ import '!file-loader?name=[name].[ext]!./images/logo-vk.svg';
 import '!file-loader?name=[name].[ext]!./images/logo-google.svg';
 import '!file-loader?name=[name].[ext]!./images/photo.png';
 import '!file-loader?name=[name].[ext]!./images/separator.PNG';
+import '!file-loader?name=[name].[ext]!./images/background.png';
 
 // Load the fonts
 import '!file-loader?name=[name].[ext]!./fonts/header/header.ttf';
