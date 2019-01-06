@@ -1,2 +1,2 @@
-# EACH-frontend
-Frontend side of EACH application
+# SITE-frontend
+Frontend side of SITE application
