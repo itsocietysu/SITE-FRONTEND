@@ -1,4 +1,12 @@
 .swiper-wrap-team {
-  margin-top: 100px;
   height: 400px;
+}
+.team-wrap {
+  margin-top: 100px;
+}
+.title-team {
+  text-align: center;
+}
+.background-color {
+  background-color: rgba(161, 227, 195, 0.56);
 }

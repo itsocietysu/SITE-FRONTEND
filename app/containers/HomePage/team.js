@@ -5,7 +5,7 @@ import Swiper from 'react-id-swiper';
 import '../../../node_modules/react-id-swiper/node_modules/swiper/dist/js/swiper.min';
 import '../../../node_modules/react-id-swiper/node_modules/swiper/dist/css/swiper.min.css';
 import NormalImg from '../../components/Img';
-import './whatandhow.css';
+import './team.css';
 
 const Img = styled(NormalImg)`
   width: 10vw;
@@ -33,21 +33,26 @@ const WhatAndHow = () => {
   };
 
   return (
-    <div className="swiper-wrap-what">
-      <Swiper {...params}>
-        <div>
-          <span className="titleText">Что и как мы делаем</span>
+    <div className="team-wrap">
+      <div className="title title-team">Команда</div>
+      <div className="background-color">
+        <div className="swiper-wrap-team">
+          <Swiper {...params}>
+            <div>
+              <span className="titleText">Что и как мы делаем</span>
+            </div>
+            <div>
+              <LogoWithText url="/mouse.svg" text="Создание ПО" />
+            </div>
+            <div>
+              <LogoWithText url="/puzzle.svg" text="Ведение проекта" />
+            </div>
+            <div>
+              <LogoWithText url="/hammer.svg" text="И еще что-то" />
+            </div>
+          </Swiper>
         </div>
-        <div>
-          <LogoWithText url="/mouse.svg" text="Создание ПО" />
-        </div>
-        <div>
-          <LogoWithText url="/puzzle.svg" text="Ведение проекта" />
-        </div>
-        <div>
-          <LogoWithText url="/hammer.svg" text="И еще что-то" />
-        </div>
-      </Swiper>
+      </div>
     </div>
   );
 };
