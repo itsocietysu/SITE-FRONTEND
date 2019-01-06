@@ -1,0 +1,29 @@
+.text-wrap {
+  margin: 180px 0 250px 100px;
+}
+
+.title {
+  font-family: Proxima Nova, sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+}
+.description {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 3vw;
+}
+
+.buttonWithDashWrap {
+  margin: 0 0 0 3vw;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+}
+
+.blueDash {
+  font-size: 20px;
+  color: #ADD8E6;
+}

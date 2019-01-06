@@ -5,9 +5,9 @@
  */
 
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-/* import { compose } from 'redux';
+import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
@@ -24,9 +24,13 @@ import {
 
 import { contentChanged, loadData } from './actions';
 import reducer from './reducer';
-import saga from './saga'; */
+import saga from './saga';
 
 import WhatWeDo from './whatwedo';
+import WhatAndHow from './whatandhow';
+import Consultation from './consultation';
+import HowWeWork from './howwework';
+import Team from './team';
 
 /* eslint-disable react/prefer-stateless-function */
 export class HomePage extends React.PureComponent {
@@ -36,15 +40,15 @@ export class HomePage extends React.PureComponent {
   } */
 
   componentDidMount() {
-    // this.props.init();
+    this.props.init();
   }
 
-  /* componentDidUpdate(prevProps) {
-    // if (prevProps.homeContent !== this.props.homeContent) this.props.init();
-  } */
+  componentDidUpdate(prevProps) {
+    if (prevProps.homeContent !== this.props.homeContent) this.props.init();
+  }
 
   render() {
-    // const { /* loading, error, data, */ homeContent, header } = this.props;
+    // const { loading, error, data, homeContent, header } = this.props;
 
     return (
       <div>
@@ -54,18 +58,22 @@ export class HomePage extends React.PureComponent {
         </Helmet>
 
         <WhatWeDo />
+        <WhatAndHow />
+        <Consultation />
+        <HowWeWork />
+        <Team />
       </div>
     );
   }
 }
 
-/* HomePage.propTypes = {
-  loading: PropTypes.bool,
-  error: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
-  data: PropTypes.oneOfType([PropTypes.array, PropTypes.bool]),
-  header: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
+HomePage.propTypes = {
+  // loading: PropTypes.bool,
+  // error: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
+  // data: PropTypes.oneOfType([PropTypes.array, PropTypes.bool]),
+  // header: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
   init: PropTypes.func,
-  change: PropTypes.func,
+  // change: PropTypes.func,
   homeContent: PropTypes.string,
 };
 
@@ -83,7 +91,7 @@ export function mapDispatchToProps(dispatch) {
 
 const mapStateToProps = createStructuredSelector({
   data: makeSelectData(),
-  // header: makeSelectHeader(),
+  header: makeSelectHeader(),
   loading: makeSelectLoading(),
   error: makeSelectError(),
   homeContent: makeSelectContent(),
@@ -102,4 +110,4 @@ export default compose(
   withReducer,
   withSaga,
   withConnect,
-)(HomePage); */
+)(HomePage);
