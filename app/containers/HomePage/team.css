@@ -1,12 +1,21 @@
+<<<<<<< HEAD
 .background-color {
 
   margin-top: 100px;
   height: 57vw;
   background-color: rgba(161, 227, 195, 0.56);
+=======
+.swiper-wrap-team {
+  height: 400px;
+}
+.team-wrap {
+  margin-top: 100px;
+>>>>>>> 0be081c5165c98b2bc26d64de19d62e4cdf4b749
 }
 .title-team {
   text-align: center;
 }
+<<<<<<< HEAD
 
 .margin-left-4vw {
   margin-left: 4vw;
@@ -55,4 +64,8 @@
 }
 .experience {
   font-size: 20px;
+=======
+.background-color {
+  background-color: rgba(161, 227, 195, 0.56);
+>>>>>>> 0be081c5165c98b2bc26d64de19d62e4cdf4b749
 }
