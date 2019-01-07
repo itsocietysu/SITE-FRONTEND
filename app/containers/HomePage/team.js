@@ -1,57 +1,85 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import Swiper from 'react-id-swiper';
+import PropTypes from 'prop-types';
 import '../../../node_modules/react-id-swiper/node_modules/swiper/dist/js/swiper.min';
 import '../../../node_modules/react-id-swiper/node_modules/swiper/dist/css/swiper.min.css';
-import NormalImg from '../../components/Img';
 import './team.css';
+import ButtonWithDash from './buttonwithdash';
 
-const Img = styled(NormalImg)`
-  width: 10vw;
-`;
-
-const LogoWithText = ({ url, text }) => (
-  <div>
-    <Img src={url} alt="logo" />
-    <div className="textUnderLogo">{text}</div>
+const Human = ({ imageUrl, name, position, experience1, experience2 }) => (
+  <div className="my-container">
+    <img src={imageUrl} alt="Avatar" className="image" />
+    <div className="overlay">
+      <div className="human-description">
+        <div className="name">{name}</div>
+        <div className="position">{position}</div>
+        <br />
+        <div className="experience">{experience1}</div>
+        <div className="experience">{experience2}</div>
+      </div>
+    </div>
   </div>
 );
 
-LogoWithText.propTypes = {
-  url: PropTypes.string,
-  text: PropTypes.string,
+Human.propTypes = {
+  imageUrl: PropTypes.string,
+  name: PropTypes.string,
+  position: PropTypes.string,
+  experience1: PropTypes.string,
+  experience2: PropTypes.string,
 };
 
 const WhatAndHow = () => {
   const params = {
     slidesPerView: 4,
-    spaceBetween: 15,
+    spaceBetween: 0,
     slidesPerGroup: 1,
     loop: true,
     loopFillGroupWithBlank: true,
   };
 
   return (
-    <div className="team-wrap">
+    <div className="background-color">
       <div className="title title-team">Команда</div>
-      <div className="background-color">
-        <div className="swiper-wrap-team">
-          <Swiper {...params}>
-            <div>
-              <span className="titleText">Что и как мы делаем</span>
-            </div>
-            <div>
-              <LogoWithText url="/mouse.svg" text="Создание ПО" />
-            </div>
-            <div>
-              <LogoWithText url="/puzzle.svg" text="Ведение проекта" />
-            </div>
-            <div>
-              <LogoWithText url="/hammer.svg" text="И еще что-то" />
-            </div>
-          </Swiper>
+      <Swiper {...params}>
+        <div>
+          <Human
+            imageUrl="/photo-girl.png"
+            name="Маша Иванова"
+            position="JavaScript Developer"
+            experience1="Работала в JetBrainsPlumbr"
+            experience2="Организатор Joker Conf"
+          />
         </div>
+        <div>
+          <Human
+            imageUrl="/photo-man.svg"
+            name="Даниил Савчук"
+            position="CEO"
+            experience1="Работает в EPAM"
+          />
+        </div>
+        <div>
+          <Human
+            imageUrl="/photo-man.svg"
+            name="Иван Барабанов"
+            position="Business Analyst"
+          />
+        </div>
+        <div>
+          <Human
+            imageUrl="/photo-man.svg"
+            name="Антон Клочков"
+            position="Principle Developer"
+          />
+        </div>
+      </Swiper>
+      <div className="button-wrap-team">
+        <ButtonWithDash text="Подробнее о карьере в ITS" />
+        <ButtonWithDash
+          text="Подробнее о сообществе ITS"
+          classLocation="margin-left-3vw"
+        />
       </div>
     </div>
   );

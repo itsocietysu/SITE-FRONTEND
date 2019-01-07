@@ -28,10 +28,7 @@ import 'file-loader?name=[name].[ext]!./.htaccess'; // eslint-disable-line impor
 // Load the images
 import '!file-loader?name=[name].[ext]!./images/favicon.ico';
 import '!file-loader?name=[name].[ext]!./images/logo.svg';
-import '!file-loader?name=[name].[ext]!./images/logo-vk.svg';
-import '!file-loader?name=[name].[ext]!./images/logo-google.svg';
 import '!file-loader?name=[name].[ext]!./images/photo.png';
-import '!file-loader?name=[name].[ext]!./images/separator.PNG';
 import '!file-loader?name=[name].[ext]!./images/background.png';
 import '!file-loader?name=[name].[ext]!./images/mouse.svg';
 import '!file-loader?name=[name].[ext]!./images/puzzle.svg';
@@ -39,6 +36,8 @@ import '!file-loader?name=[name].[ext]!./images/hammer.svg';
 import '!file-loader?name=[name].[ext]!./images/sea.png';
 import '!file-loader?name=[name].[ext]!./images/metro.svg';
 import '!file-loader?name=[name].[ext]!./images/train.svg';
+import '!file-loader?name=[name].[ext]!./images/photo-man.svg';
+import '!file-loader?name=[name].[ext]!./images/photo-girl.png';
 
 // Load the fonts
 import '!file-loader?name=[name].[ext]!./fonts/header/header.ttf';

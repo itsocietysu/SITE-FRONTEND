@@ -1,6 +1,4 @@
 import React from 'react';
-import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '../../../node_modules/jquery/dist/jquery.min';
 import './consultation.css';
 import ButtonWithDash from './buttonwithdash';
 

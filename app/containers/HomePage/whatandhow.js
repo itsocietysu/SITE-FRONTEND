@@ -36,16 +36,24 @@ const WhatAndHow = () => {
     <div className="swiper-wrap-what">
       <Swiper {...params}>
         <div>
-          <span className="titleText">Что и как мы делаем</span>
+          <div className="swiper-slide-what">
+            <span className="title">Что и как мы делаем</span>
+          </div>
         </div>
         <div>
-          <LogoWithText url="/mouse.svg" text="Создание ПО" />
+          <div className="swiper-slide-what">
+            <LogoWithText url="/mouse.svg" text="Создание ПО" />
+          </div>
         </div>
         <div>
-          <LogoWithText url="/puzzle.svg" text="Ведение проекта" />
+          <div className="swiper-slide-what">
+            <LogoWithText url="/puzzle.svg" text="Ведение проекта" />
+          </div>
         </div>
         <div>
-          <LogoWithText url="/hammer.svg" text="И еще что-то" />
+          <div className="swiper-slide-what">
+            <LogoWithText url="/hammer.svg" text="И еще что-то" />
+          </div>
         </div>
       </Swiper>
     </div>

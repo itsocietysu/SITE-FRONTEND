@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Container, Row, Col } from 'reactstrap';
 import './whatwedo.css';
-import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '../../../node_modules/jquery/dist/jquery.min';
 import ButtonWithDash from './buttonwithdash';
 
 const ImgMain = styled.div`
@@ -14,9 +13,9 @@ const ImgMain = styled.div`
 `;
 
 const WhatWeDo = () => (
-  <div className="container-fluid">
-    <div className="row no-gutters">
-      <div className="col-6">
+  <Container fluid>
+    <Row noGutters>
+      <Col>
         <div className="text-wrap">
           <span className="title">Мы делаем IT продукты</span>
           <div className="description">
@@ -37,13 +36,13 @@ const WhatWeDo = () => (
             />
           </div>
         </div>
-      </div>
+      </Col>
 
       <div className="col-6">
         <ImgMain />
       </div>
-    </div>
-  </div>
+    </Row>
+  </Container>
 );
 
 export default WhatWeDo;

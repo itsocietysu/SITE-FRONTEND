@@ -1,4 +1,4 @@
-.swiper-slide {
+.swiper-slide-what {
 
   text-align: center;
   font-size: 18px;
@@ -15,12 +15,6 @@
   -ms-flex-align: center;
 }
 
-
-.titleText {
-  font-size: 40px;
-  font-weight: 900;
-  font-family: Proxima Nova, sans-serif;
-}
 
 .textUnderLogo {
   margin-top: 10px;
