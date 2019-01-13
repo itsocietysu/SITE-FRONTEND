@@ -1,33 +1,11 @@
 import React from 'react';
 import Swiper from 'react-id-swiper';
-import PropTypes from 'prop-types';
-import '../../../node_modules/react-id-swiper/node_modules/swiper/dist/js/swiper.min';
+import Button from '../Button/button';
+import Worker from '../Worker/worker';
+import Title from '../Title/title';
+
 import '../../../node_modules/react-id-swiper/node_modules/swiper/dist/css/swiper.min.css';
 import './team.css';
-import ButtonWithDash from './buttonwithdash';
-
-const Human = ({ imageUrl, name, position, experience1, experience2 }) => (
-  <div className="my-container">
-    <img src={imageUrl} alt="Avatar" className="image" />
-    <div className="overlay">
-      <div className="human-description">
-        <div className="name">{name}</div>
-        <div className="position">{position}</div>
-        <br />
-        <div className="experience">{experience1}</div>
-        <div className="experience">{experience2}</div>
-      </div>
-    </div>
-  </div>
-);
-
-Human.propTypes = {
-  imageUrl: PropTypes.string,
-  name: PropTypes.string,
-  position: PropTypes.string,
-  experience1: PropTypes.string,
-  experience2: PropTypes.string,
-};
 
 const WhatAndHow = () => {
   const params = {
@@ -39,11 +17,11 @@ const WhatAndHow = () => {
   };
 
   return (
-    <div className="background-color">
-      <div className="title title-team">Команда</div>
+    <div className="team">
+      <Title className="team__title">Команда</Title>
       <Swiper {...params}>
         <div>
-          <Human
+          <Worker
             imageUrl="/photo-girl.png"
             name="Маша Иванова"
             position="JavaScript Developer"
@@ -52,7 +30,7 @@ const WhatAndHow = () => {
           />
         </div>
         <div>
-          <Human
+          <Worker
             imageUrl="/photo-man.svg"
             name="Даниил Савчук"
             position="CEO"
@@ -60,25 +38,25 @@ const WhatAndHow = () => {
           />
         </div>
         <div>
-          <Human
+          <Worker
             imageUrl="/photo-man.svg"
             name="Иван Барабанов"
             position="Business Analyst"
           />
         </div>
         <div>
-          <Human
+          <Worker
             imageUrl="/photo-man.svg"
             name="Антон Клочков"
             position="Principle Developer"
           />
         </div>
       </Swiper>
-      <div className="button-wrap-team">
-        <ButtonWithDash text="Подробнее о карьере в ITS" />
-        <ButtonWithDash
+      <div className="team__button">
+        <Button text="Подробнее о карьере в ITS" />
+        <Button
           text="Подробнее о сообществе ITS"
-          classLocation="margin-left-3vw"
+          buttonLocation="team__button_margin"
         />
       </div>
     </div>

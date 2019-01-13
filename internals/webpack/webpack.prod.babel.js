@@ -70,9 +70,9 @@ module.exports = require('./webpack.base.babel')({
     }),
 
     new WebpackPwaManifest({
-      name: 'MUSEEACH',
-      short_name: 'EACH',
-      description: 'EACH project',
+      name: 'SITE',
+      short_name: 'SITE',
+      description: 'SITE project',
       background_color: '#fafafa',
       theme_color: '#5b7bbb',
       icons: [

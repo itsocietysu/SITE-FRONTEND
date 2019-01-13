@@ -1,48 +1,41 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Container, Row, Col } from 'reactstrap';
-import './whatwedo.css';
-import ButtonWithDash from './buttonwithdash';
+import Button from '../Button/button';
+import Title from '../Title/title';
 
-const ImgMain = styled.div`
-  margin-top: -3vw;
-  width: 100%;
-  height: 48vw;
-  background: url('/background.png') no-repeat;
-  background-size: contain;
-`;
+import './description.css';
 
-const WhatWeDo = () => (
-  <Container fluid>
-    <Row noGutters>
+const Description = () => (
+  <Container fluid={true}>
+    <Row noGutters={true}>
       <Col>
-        <div className="text-wrap">
-          <span className="title">Мы делаем IT продукты</span>
-          <div className="description">
+        <div className="description__text_container">
+          <Title>Мы делаем IT продукты</Title>
+          <div className="description__text">
             ITS — сообщество специалистов в IT-индустрии. Наша цель — это
             разработка продуктов и построение сообщества в среде информационных
             технологий.Мы даем возможность компаниям прийти к нам с идеей и
             реализовать ее. Наша команда проведет полный консалтинг и реализует
             проект с начала и до самого конца.
           </div>
-          <div className="buttons">
-            <ButtonWithDash
+          <div className="description__button_container">
+            <Button
               text="Заполнить бриф"
-              classLocation="margin-left-3vw"
+              buttonLocation="description__button_margin"
             />
-            <ButtonWithDash
+            <Button
               text="Просмотреть проекты"
-              classLocation="margin-left-3vw"
+              buttonLocation="description__button_margin"
             />
           </div>
         </div>
       </Col>
 
-      <div className="col-6">
-        <ImgMain />
-      </div>
+      <Col>
+        <div className="description__img" />
+      </Col>
     </Row>
   </Container>
 );
 
-export default WhatWeDo;
+export default Description;

@@ -1,0 +1,16 @@
+.button__text {
+  font-family: Arial, sans-serif;
+  font-size: calc(10px + 0.6vw);
+}
+.button__dash {
+  font-size: calc(12px + 0.6vw);
+  color: #7498e6;
+}
+@media screen and (max-width: 530px) {
+  .button__text {
+    font-size: 2.48vw;
+  }
+  .button__dash {
+    font-size: 2.86vw;
+  }
+}

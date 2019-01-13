@@ -1,9 +1,9 @@
 {
-  "name": "each",
+  "name": "site",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "git://github.com/itsocietysu/EACH-frontend.git"
+    "url": "git://github.com/itsocietysu/SITE-FRONTEND.git"
   },
   "engines": {
     "npm": ">=5",
@@ -162,7 +162,7 @@
     "rc-select": "8.4.0",
     "react": "16.4.1",
     "react-contextmenu": "2.9.4",
-    "react-dom": "^16.4.2",
+    "react-dom": "^16.7.0",
     "react-helmet": "5.2.0",
     "react-id-swiper": "^1.6.8",
     "react-image-crop": "^4.0.3",

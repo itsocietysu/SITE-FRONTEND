@@ -1,10 +1,11 @@
 import React from 'react';
+import Button from '../Button/button';
+
 import './consultation.css';
-import ButtonWithDash from './buttonwithdash';
 
 const Consultation = () => (
   <div>
-    <div className="descriptionWrap">
+    <div className="consultation__text consultation__text_font">
       <div>
         ITS — сообщество специалистов в IT-индустрии. Наша цель — это разработка
         продуктов и построение сообщества в среде информационных технологий. Мы
@@ -12,15 +13,17 @@ const Consultation = () => (
         команда проведет полный консалтинг и реализует проект с начала и до
         самого конца.
       </div>
-      <div style={{ margin: '4vw 0 0 0' }}>
+      <div className="consultation__text_padding">
         С вами свяжутся и проведут бесплатную консультацию
       </div>
     </div>
-    <div className="buttonWrap">
-      <ButtonWithDash text="Оставить заявку" />
-      <ButtonWithDash
+    <div className="consultation__button">
+      <Button
+        text="Оставить заявку"
+      />
+      <Button
         text="Скачать презентацию"
-        classLocation="margin-left-4vw"
+        buttonLocation="consultation__button_margin"
       />
     </div>
   </div>

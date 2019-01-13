@@ -1,7 +1,6 @@
-.swiper-slide-what {
+.services__slide {
 
   text-align: center;
-  font-size: 18px;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,15 +14,7 @@
   -ms-flex-align: center;
 }
 
+.services__swiper {
+  margin-top: 9vw;
 
-.textUnderLogo {
-  margin-top: 10px;
-  font-family: Proxima Nova, sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.swiper-wrap-what {
-  margin-top: 100px;
-  height: 180px;
 }

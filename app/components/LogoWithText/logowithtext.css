@@ -1,0 +1,18 @@
+.logo-with-text__img {
+  width: 10vw;
+}
+
+.logo-with-text__text_font {
+  font-family: Proxima Nova, sans-serif;
+  font-weight: bold;
+  font-size: calc(12px + 0.6vw);
+}
+@media screen and (max-width: 530px) {
+  .logo-with-text__text_font {
+    font-size: 2.86vw;
+  }
+}
+
+.logo-with-text__text {
+  margin-top: 0.9vw;
+}

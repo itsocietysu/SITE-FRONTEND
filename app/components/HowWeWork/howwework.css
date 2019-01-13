@@ -1,0 +1,61 @@
+.how-we-work__container {
+  margin-top: 8vw;
+}
+
+.how-we-work__row {
+  width: 92%;
+  margin-left: 8%;
+  height: 43vw;
+}
+
+.how-we-work__title {
+  margin-top: 45%;
+  margin-right: 10%;
+}
+
+.how-we-work__button_margin {
+  position: absolute;
+  padding: 0 10% 0 30%;
+  bottom: 2.5vw;
+}
+
+.how-we-work__text_font {
+  font-family: Arial, sans-serif;
+  font-size: calc(12px + 0.6vw);
+  font-weight: bold;
+}
+@media screen and (max-width: 530px) {
+  .how-we-work__text_font {
+    font-size: 2.86vw;
+  }
+}
+
+.how-we-work__text {
+  margin-bottom: 2.5vw;
+}
+
+.how-we-work__img {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.how-we-work__img_sea {
+  background: url("../../images/sea.png") no-repeat;
+  background-size: cover;
+}
+
+.how-we-work__img_train {
+  background: url('../../images/train.svg') no-repeat;
+  background-size: cover;
+}
+
+.how-we-work__img_subway {
+  background: url('../../images/metro.svg') no-repeat;
+  background-size: cover;
+}
+
+
+

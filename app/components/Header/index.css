@@ -1,11 +1,14 @@
+.header {
+  padding: 2vw;
+}
 
-.menu-text {
-  font-size: 16px;
-  font-family: Montserrat;
-  color: #424242 !important;
+.header__margin {
   margin-right: 1vw;
 }
 
-.my-navbar {
-  padding: 2vw 2vw 2vw 2vw;
+.header__text {
+  font-size: calc(8px + 0.65vw);
+  font-family: Montserrat, sans-serif;
+  color: #424242 !important;
 }
+

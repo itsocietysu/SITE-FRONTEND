@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 const Title = styled.div`
-  height: 3em;
-  text-align: center;
-
+  font-family: Proxima Nova, sans-serif;
+  font-size: calc(28px + 0.9vw);
+  font-weight: 900;
   @media screen and (max-width: 530px) {
-    height: calc(9.143vw - 0.4579px);
+    font-size: 5.17vw;
   }
 `;
 

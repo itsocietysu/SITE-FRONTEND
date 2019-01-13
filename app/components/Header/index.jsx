@@ -11,14 +11,47 @@ import {
   NavLink,
 } from 'reactstrap';
 import Img from './Img';
-import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '../../../node_modules/jquery/dist/jquery.min';
-
 import LocaleToggle from '../../containers/LocaleToggle';
+
+import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+
 import navs from './navItems.json';
 
+const HeaderSpan =({text}) => (
+  <span className="header__text header__margin">
+    {text}
+  </span>
+);
+
 class Header extends React.Component {
+  render() {
+    return (
+      <div className="header">
+        <Navbar light expand="md">
+          <NavbarBrand href="/">
+            <Img src="/logo.svg" alt="SITE - Logo" />
+          </NavbarBrand>
+          <HeaderSpan text={'+7 (999) 777-77-77'}/>
+          <HeaderSpan text={'info@its.society'}/>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav navbar className="ml-auto">
+              {navs.map(el => (
+                <NavItem key={el.linkName}>
+                  <NavLink className="header__text header__margin" href={el.link}>
+                    {el.linkName}
+                  </NavLink>
+                </NavItem>
+              ))}
+            </Nav>
+          </Collapse>
+          <LocaleToggle />
+        </Navbar>
+      </div>
+    );
+  }
+
   constructor(props) {
     super(props);
 
@@ -31,35 +64,6 @@ class Header extends React.Component {
     this.setState({
       isOpen: !this.state.isOpen,
     });
-  }
-
-  render() {
-    return (
-      <div>
-        <Navbar className="my-navbar" light expand="md">
-          <NavbarBrand href="/">
-            <Img src="/logo.svg" alt="SITE - Logo" />
-          </NavbarBrand>
-          <span className="menu-text" style={{ margin: '0 2vw 0 0em' }}>
-            +7 (999) 777-77-77
-          </span>
-          <span className="menu-text">info@its.society</span>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav navbar className="ml-auto">
-              {navs.map(el => (
-                <NavItem key={el.linkName}>
-                  <NavLink className="menu-text" href={el.link}>
-                    {el.linkName}
-                  </NavLink>
-                </NavItem>
-              ))}
-            </Nav>
-          </Collapse>
-          <LocaleToggle />
-        </Navbar>
-      </div>
-    );
   }
 }
 
