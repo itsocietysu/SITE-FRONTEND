@@ -1,0 +1,24 @@
+.team {
+  margin-top: 8vw;
+  height: auto;
+  background-color: rgba(161, 227, 195, 0.56);
+}
+
+.team__title {
+  text-align: center;
+}
+
+.team__button {
+  display: flex;
+  padding-top: 5vw;
+  padding-left: 50%;
+  padding-bottom: 5vw;
+}
+
+.team__button_margin{
+  margin-left: 4vw;
+}
+
+
+
+

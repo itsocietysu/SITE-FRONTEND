@@ -1,0 +1,30 @@
+.description__text_container {
+  margin: 13vw 0 0 16%;
+}
+
+.description__text {
+  font-family: Arial, sans-serif;
+  font-size: calc(7px + 0.6vw);
+}
+@media screen and (max-width: 530px) {
+  .description__text {
+    font-size: 1.92vw;
+  }
+}
+
+.description__button_container {
+  display: flex;
+  margin-top: 3vw;
+}
+
+.description__img {
+  margin-top: -3vw;
+  width: 100%;
+  height: calc(100px + 40vw);
+  background: url('../../images/background.png') no-repeat;
+  background-size: contain;
+}
+
+.description__button_margin {
+  margin-left: 3vw;
+}

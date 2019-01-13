@@ -1,0 +1,31 @@
+.footer {
+  line-height: 1;
+}
+.footer__col {
+  padding: 5vw 0 0 6vw;
+}
+.footer__title {
+  font-size: calc(17px + 0.6vw);
+  font-weight: bold;
+}
+
+.footer__a {
+  font-size: calc(8px + 0.6vw);
+}
+
+.footer__li {
+  margin-top: 1vw;
+}
+
+.footer__img {
+  width: calc(20px + 8vw);
+}
+
+@media screen and (max-width: 530px) {
+  .footer__a {
+    font-size: 2.1vw;
+  }
+  .footer__title {
+    font-size: 3.86vw;
+  }
+}
